@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Alunos</title>
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+</head>
+<body>
+    <h1>Alunos</h1>
+    <ol>
+        {% for aluno in alunos %}
+            <li>
+                <strong>Nome: </strong>{{aluno.nome}}
+                <strong>Curso: </strong>{{aluno.curso}}
+                <strong>RGM: </strong>{{aluno.rgm }}
+                <strong>Semestre: </strong>{{aluno.semestre }}
+                <a href="{% url 'atualizarAluno' aluno.id %}">Atualizar</a>
+                <a href="{% url 'deletarAluno' aluno.id %}" class="delete">Deletar</a>
+            </li>
+        {% empty %}
+            <li>Lista vazia</li>
+        {% endfor %}
+    </ol>
+    <a href="{% url 'home' %}">Voltar</a>
+    <a href="{% url 'criarAluno' %}">Adicionar aluno</a>
+</body>
+</html>

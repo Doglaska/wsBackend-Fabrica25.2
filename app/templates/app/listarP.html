@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Professores</title>
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+</head>
+<body>
+    <h1>Professores</h1>
+    <ol>
+        {% for professor in professores %}
+            <li>
+                <strong>Nome: </strong>{{professor.nome}}
+                <strong>Formcação: </strong>{{professor.formacao}}
+                <strong>Especialidade: </strong>{{professor.especialidade}}
+                <strong>email: </strong>{{professor.email}}
+                <a href="{% url 'atualizarProfessor' professor.id %}">Atualizar</a>
+                <a href="{% url 'deletarProfessor' professor.id %}" class="delete">Deletar</a>
+            </li>
+        {% empty %}
+            <li>Lista vazia</li>
+        {% endfor %}
+    </ol>
+    <a href="{% url 'home' %}">Voltar</a>
+    <a href="{% url 'criarProfessor' %}">Adicionar professor</a>
+</body>
+</html>

@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
 </head>
 <body>
-    <h1>Bem vindo!!!</h1>
+    <h1>Bem vindo</h1>
+    <div class="container">
+        <section>
+            <h2>Alunos</h2>
+            <div class="pretty">
+                <p><a href="{% url 'listarAlunos' %}">Lista de alunos</a></p>
+                <p><a href="{% url 'criarAluno' %}">Adicionar aluno</a></p>
+            </div>
+        </section>    
+        <section>
+            <h2>Professores</h2>
+            <div class="pretty">
+                <p><a href="{% url 'listarProfessores' %}">Lista de professores</a></p>
+                <p><a href="{% url 'criarProfessor' %}">Adicionar professor</a></p>
+            </div>
+        </section>      
+        <section>
+            <h2>Localizar</h2>
+            <div class="pretty">
+                <p><a href="{% url 'localizarIp' %}">Ver minha localização</a></p>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

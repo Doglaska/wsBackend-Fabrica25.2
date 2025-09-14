@@ -8,3 +8,13 @@ class Aluno(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class Professor(models.Model):
+    nome = models.CharField(max_length=60)
+    formacao = models.CharField(max_length=30)
+    especialidade = models.CharField(max_length=50)
+    email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return f"{self.nome} {self.email}"

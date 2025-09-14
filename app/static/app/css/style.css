@@ -1,9 +1,105 @@
 body {
-    background-color: #130404;
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 40px;
 }
+
 h1 {
-    color: rgb(18, 237, 18);
     text-align: center;
+    color: #00ffcc;
     font-size: 100px;
-    margin-top: 300px;
+}
+
+label {
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+button {
+    background-color:#00ffff;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: #121212;
+    color: #00ffff;
+    box-shadow: 0 0 8px #00ffff;
+}
+
+li {
+    background-color: #1f1f1f;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+a {
+    color: black;
+    background-color: #00ffff;
+    text-decoration: none;
+    display: inline-flex;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+a:hover {
+    background-color: #121212;
+    color: #00ffff;
+    box-shadow: 0 0 8px #00ffff;
+}
+
+input[type="text"],
+input[type="number"],
+input[type='email'],
+select,
+textarea {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 5%;              
+    margin-top: 50px;
+}
+
+section {
+    background-color: #1a1a1a;
+    border: 1px solid #00ffcc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+}
+
+section h2 {
+    color: #00ffcc;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.pretty{
+    text-align: center;
+}
+
+.delete{
+    background-color: rgb(108, 41, 54);
 }
